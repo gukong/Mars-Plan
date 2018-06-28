@@ -8,17 +8,20 @@
         class="plane-label"
         @click.native="openPages(item.routerName)">
       </plane-label>
+      <loading-component></loading-component>
     </div>
   </div>
 </template>
 
 <script>
   import PlaneLabel from './index/plane-label'
+  const LoadingComponent = () => import('@/components/loading' /* webpackChunkName: "Loading" */)
 
   export default {
     name: 'hello',
     components: {
-      PlaneLabel
+      PlaneLabel,
+      LoadingComponent
     },
     data() {
       return {
@@ -62,6 +65,9 @@
       .plane-label {
         margin: 0 10px;
       }
+    }
+    .demo {
+      height: 400ex;
     }
   }
 </style>

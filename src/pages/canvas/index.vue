@@ -5,6 +5,7 @@
       <smile class="smile"></smile>
       <bubble class="bubble"></bubble>
       <paper-demo class="paper-demo"></paper-demo>
+      <path-demo class="path-demo"></path-demo>
     </div>
   </div>
 </template>
@@ -15,12 +16,13 @@
   import Smile from './components/smile'
   import Bubble from './components/bubble'
   import PaperDemo from './components/paper-demo/index'
-
+  import PathDemo from './components/path-demo/index'
   export default {
     components: {
       Smile,
       Bubble,
-      PaperDemo
+      PaperDemo,
+      PathDemo
     },
     data() {
       return {
@@ -55,6 +57,11 @@
     .paper-demo {
       width: 800px;
       height: 800px;
+      border: 2px solid gainsboro;
+    }
+    .path-demo {
+      width: 1200px;
+      height: 1200px;
       border: 2px solid gainsboro;
     }
   }

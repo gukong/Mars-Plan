@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/index'
-import Canvas from '@/pages/canvas/index'
+
+const Index = () => import('@/pages/index'/* webpackChunkName: "Index" */)
+const Canvas = () => import('@/pages/canvas/index'/* webpackChunkName: "canvas" */)
 
 Vue.use(Router)
 
